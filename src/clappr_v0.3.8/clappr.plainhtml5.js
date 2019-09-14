@@ -5324,7 +5324,7 @@
             function e() {
                 var n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-                    s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                    s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : !0;//改：修正错误
                 (0, o.default)(this, e);
                 var l = (0, a.default)(this, t.call(this));
                 return l.playerId = i, l.playbackPlugins = [], s || (l.playbackPlugins = [].concat((0, r.default)(l.playbackPlugins), [h.default])), l.playbackPlugins = [].concat((0, r.default)(l.playbackPlugins), [c.default, f.default]), s || (l.playbackPlugins = [].concat((0, r.default)(l.playbackPlugins), [d.default, p.default])), l.playbackPlugins = [].concat((0, r.default)(l.playbackPlugins), [A.default, g.default]), l.containerPlugins = [y.default, v.default, b.default, m.default, _.default, E.default], l.corePlugins = [T.default, C.default, k.default, O.default, w.default, S.default, x.default, P.default, I.default], Array.isArray(n) || l.validateExternalPluginsType(n), l.addExternalPlugins(n), l
@@ -7514,7 +7514,7 @@
                 }
             }]), e.prototype.t = function(t) {
                 var e = this._language(),
-                    n = this._messages.en;
+                    n = this._messages.cn;//改：默认cn
                 return (e && this._messages[e] || n)[t] || n[t] || t
             }, e.prototype._language = function() {
                 return this.core.options.language || (0, s.getBrowserLanguage)()
@@ -7528,55 +7528,15 @@
                         default_error_title: "Could not play video.",
                         default_error_message: "There was a problem trying to load the video."
                     },
-                    pt: {
-                        live: "ao vivo",
-                        back_to_live: "voltar para o ao vivo",
-                        disabled: "Desativado",
-                        playback_not_supported: "Seu navegador não supporta a reprodução deste video. Por favor, tente usar um navegador diferente.",
-                        default_error_title: "Não foi possível reproduzir o vídeo.",
-                        default_error_message: "Ocorreu um problema ao tentar carregar o vídeo."
-                    },
-                    es: {
-                        live: "vivo",
-                        back_to_live: "volver en vivo",
-                        disabled: "Discapacitado",
-                        playback_not_supported: "Su navegador no soporta la reproducción de un video. Por favor, trate de usar un navegador diferente."
-                    },
-                    ru: {
-                        live: "прямой эфир",
-                        back_to_live: "к прямому эфиру",
-                        disabled: "Отключено",
-                        playback_not_supported: "Ваш браузер не поддерживает воспроизведение этого видео. Пожалуйста, попробуйте другой браузер."
-                    },
-                    fr: {
-                        live: "en direct",
-                        back_to_live: "retour au direct",
-                        disabled: "Désactivé",
-                        playback_not_supported: "Votre navigateur ne supporte pas la lecture de cette vidéo. Merci de tenter sur un autre navigateur.",
-                        default_error_title: "Impossible de lire la vidéo.",
-                        default_error_message: "Un problème est survenu lors du chargement de la vidéo."
-                    },
-                    tr: {
-                        live: "canlı",
-                        back_to_live: "canlı yayına dön",
-                        disabled: "Engelli",
-                        playback_not_supported: "Tarayıcınız bu videoyu oynatma desteğine sahip değil. Lütfen farklı bir tarayıcı ile deneyin."
-                    },
-                    et: {
-                        live: "Otseülekanne",
-                        back_to_live: "Tagasi otseülekande juurde",
-                        disabled: "Keelatud",
-                        playback_not_supported: "Teie brauser ei toeta selle video taasesitust. Proovige kasutada muud brauserit."
-                    },
-                    ar: {
-                        live: "مباشر",
-                        back_to_live: "الرجوع إلى المباشر",
-                        disabled: "معطّل",
-                        playback_not_supported: "المتصفح الذي تستخدمه لا يدعم تشغيل هذا الفيديو. الرجاء إستخدام متصفح آخر.",
-                        default_error_title: "غير قادر الى التشغيل.",
-                        default_error_message: "حدثت مشكلة أثناء تحميل الفيديو."
+                    cn: {//改：新增中文包
+                        live: "直播",
+                        back_to_live: "返回直播",
+                        disabled: "禁止",
+                        playback_not_supported: "不支持当前浏览器，请尝试更换其它浏览器。",
+                        default_error_title: "无法播放视频",
+                        default_error_message: "视频无法加载"
                     }
-                }, this.core.options.strings || {}), this._messages["pt-BR"] = this._messages.pt, this._messages["en-US"] = this._messages.en, this._messages["es-419"] = this._messages.es, this._messages["fr-FR"] = this._messages.fr, this._messages["tr-TR"] = this._messages.tr, this._messages["et-EE"] = this._messages.et, this._messages["ar-IQ"] = this._messages.ar
+                }, this.core.options.strings || {}), this._messages["cn-ZH"] = this._messages.cn, this._messages["en-US"] = this._messages.en
             }, e
         }(u(n(35)).default);
         e.default = c, t.exports = e.default
