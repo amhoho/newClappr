@@ -5279,7 +5279,7 @@
         var i = n(82);
         (t.exports = n(8)(!1)).push([t.i, '@font-face {\n  font-family: "Roboto";\n  font-style: normal;\n  font-weight: 400;\n  src: local("Roboto"), local("Roboto-Regular"), url(' + i(n(163)) + ') format("truetype");\n}\n', ""])
     }, function(t, e) {
-        t.exports = "<%=baseUrl%>/38861cba61c66739c1452c3a71e39852.ttf"
+        t.exports = ""
     }, function(t, e, n) {
         "use strict";
         Object.defineProperty(e, "__esModule", {
