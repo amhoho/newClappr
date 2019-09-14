@@ -4990,7 +4990,6 @@
                     }))
                 })
             }, e.prototype.findPlaybackPlugin = function(t, e) {
-               console.log(this.loader.playbackPlugins);
                 return this.loader.playbackPlugins.filter(function(n) {
                     return n.canPlay(t, e)
                 })[0]
@@ -5325,8 +5324,7 @@
             function e() {
                 var n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-                    s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2];
-                    console.log(s);
+                    s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                 (0, o.default)(this, e);
                 var l = (0, a.default)(this, t.call(this));
                 return l.playerId = i, l.playbackPlugins = [], s || (l.playbackPlugins = [].concat((0, r.default)(l.playbackPlugins), [h.default])), l.playbackPlugins = [].concat((0, r.default)(l.playbackPlugins), [c.default, f.default]), s || (l.playbackPlugins = [].concat((0, r.default)(l.playbackPlugins), [d.default, p.default])), l.playbackPlugins = [].concat((0, r.default)(l.playbackPlugins), [A.default, g.default]), l.containerPlugins = [y.default, v.default, b.default, m.default, _.default, E.default], l.corePlugins = [T.default, C.default, k.default, O.default, w.default, S.default, x.default, P.default, I.default], Array.isArray(n) || l.validateExternalPluginsType(n), l.addExternalPlugins(n), l
